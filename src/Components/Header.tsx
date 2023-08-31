@@ -1,10 +1,26 @@
 import * as React from "react";
 import { styled, alpha } from "@mui/material/styles";
 import {
-  AppBar, Box, Toolbar, IconButton, Typography, InputBase, Badge, MenuItem, Menu, Container, Button,
+  AppBar,
+  Box,
+  Toolbar,
+  IconButton,
+  Typography,
+  InputBase,
+  Badge,
+  MenuItem,
+  Menu,
+  Container,
+  Button,
+  colors,
 } from "@mui/material";
 import {
-  Menu as MenuIcon,Search as SearchIcon,AccountCircle, Mail as MailIcon, Notifications as NotificationsIcon, MoreVert as MoreIcon,
+  Menu as MenuIcon,
+  Search as SearchIcon,
+  AccountCircle,
+  Mail as MailIcon,
+  Notifications as NotificationsIcon,
+  MoreVert as MoreIcon,
 } from "@mui/icons-material";
 
 const pages = ["Sign In |", "Join"];
@@ -61,7 +77,7 @@ function Header() {
   }));
 
   return (
-    <AppBar position="static">
+    <AppBar position="static" style={{ backgroundColor: "black" }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
@@ -112,15 +128,31 @@ function Header() {
               </Button>
             ))}
           </Box>
-          <Search>
-          <SearchIconWrapper>
-            <SearchIcon />
-          </SearchIconWrapper>
-          <StyledInputBase
-            placeholder="Search…"
-            inputProps={{ 'aria-label': 'search' }}
-          />
-        </Search>
+          <Box sx={{ flexGrow: 1, display: "flex", alignItems: "center" }}>
+            <Typography
+              style={{
+                color: "White",
+                backgroundColor: "red",
+                padding: 10,
+                fontWeight: 1,
+                fontFamily: "Helvetica Neue",
+                fontSize: 30,
+                textAlign: "center",
+                margin: "auto", // Add margin auto to center horizontally
+              }}
+            >
+              Marvels Studio
+            </Typography>
+          </Box>
+          <Search style={{ backgroundColor: "white", color: "black" }}>
+            <SearchIconWrapper>
+              <SearchIcon />
+            </SearchIconWrapper>
+            <StyledInputBase
+              placeholder="Search…"
+              inputProps={{ "aria-label": "search" }}
+            />
+          </Search>
         </Toolbar>
       </Container>
     </AppBar>

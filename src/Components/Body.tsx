@@ -1,7 +1,14 @@
 import React from 'react'
+import {Card,CardContent,Typography} from '@mui/material'
 
 export const Body = () => {
   return (
-    <div>Body</div>
+    <>
+    <Card>
+      <CardContent>
+        <Typography >Hello pakistan</Typography>
+      </CardContent>
+    </Card>
+    </>
   )
 }
