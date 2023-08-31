@@ -40,9 +40,9 @@ function Header() {
   const Search = styled("div")(({ theme }) => ({
     position: "relative",
     borderRadius: theme.shape.borderRadius,
-    backgroundColor: alpha(theme.palette.common.white, 0.15),
+    backgroundColor:'#100C08',
     "&:hover": {
-      backgroundColor: alpha(theme.palette.common.white, 0.25),
+      backgroundColor: '#100C08',
     },
     marginRight: theme.spacing(2),
     marginLeft: 0,
@@ -80,7 +80,7 @@ function Header() {
     <AppBar
       position="static"
       style={{
-        backgroundColor: "black",
+        backgroundColor: "#100C08",
         borderTop: "1px solid grey",
         borderBottom: "1px solid grey",
       }}
