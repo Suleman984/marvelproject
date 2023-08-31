@@ -77,7 +77,14 @@ function Header() {
   }));
 
   return (
-    <AppBar position="static" style={{ backgroundColor: "black" }}>
+    <AppBar
+      position="static"
+      style={{
+        backgroundColor: "black",
+        borderTop: "1px solid grey",
+        borderBottom: "1px solid grey",
+      }}
+    >
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
@@ -128,12 +135,26 @@ function Header() {
               </Button>
             ))}
           </Box>
-          <Box sx={{ flexGrow: 1, display: "flex", alignItems: "center" }}>
+          <Box
+            sx={{
+              flexGrow: 1,
+              display: "flex",
+              boxSizing: "border-box",
+              alignItems: "center",
+            }}
+          >
             <Typography
+              sx={{
+                "&:hover": {
+                  // Change background color on hover
+                  cursor: "pointer", // Change cursor on hover
+                },
+              }}
               style={{
                 color: "White",
                 backgroundColor: "red",
-                padding: 10,
+                // padding: "16px 3px",
+                boxSizing: "border-box",
                 fontWeight: 1,
                 fontFamily: "Helvetica Neue",
                 fontSize: 30,
@@ -144,6 +165,40 @@ function Header() {
               Marvels Studio
             </Typography>
           </Box>
+          <Box
+            sx={{
+              flexGrow: 1,
+              display: "flex",
+              alignItems: "center",
+            }}
+          >
+            <Typography
+              sx={{
+                "&:hover": {
+                  // Change background color on hover
+                  cursor: "pointer", // Change cursor on hover
+                },
+              }}
+              style={{
+                color: "White",
+                backgroundColor: "",
+                width: "auto",
+                borderLeft: "1px solid grey",
+                borderRight: "1px solid grey",
+                // padding: 10,
+                fontWeight: 1,
+                fontFamily: "Segoe UI Emoji",
+                fontSize: 20,
+                textAlign: "center",
+                // margin: "auto", // Add margin auto to center horizontally
+              }}
+            >
+              <span>Marvel Unlimited</span>
+              <br />
+              <span>Subscribe</span>
+            </Typography>
+          </Box>
+
           <Search style={{ backgroundColor: "white", color: "black" }}>
             <SearchIconWrapper>
               <SearchIcon />
